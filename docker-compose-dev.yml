@@ -11,7 +11,7 @@ services:
     volumes:
       - ./src:/app/src
     environment:
-      - REACT_APP_NAME=NARENDRA KUMAR DevMode
+      - REACT_APP_NAME=Welcome to My Devlopment Mode  DevMode
       - CHOKIDAR_USEPOLLING=true
     #env_file:
     #   - ./.env

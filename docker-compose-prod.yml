@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile.prod
       args:
-        - REACT_APP_NAME=NARENDRA KUMAR ProdMode
+        - REACT_APP_NAME=Welcome to My Devlopment Mode ProdMode
     ports:
       - "8080:80"
     
