@@ -4,6 +4,7 @@ Docker Steps To Step
 (for image build)
 
 docker build -t image-name
+
 docker images
 
 (for docker container with port location)
@@ -21,12 +22,15 @@ README.md  node_modules  package-lock.json  package.json  public  src
 }
 
 cd /src
+
 cat app.js=>{print file in unix}
 
 For Update in app and refelect on web
+
 docker run -e CHOKIDAR_USEPOLLING=true -v ${pwd}\src:/app/src -d -p 3000:3000 --name car-cafe-app react-webimage
 
 Read only Project For spesific Sequerty Resion 
+
  docker run -e CHOKIDAR_USEPOLLING=true -v ${pwd}\src:/app/src:ro -d -p 3000:3000 --name car-cafe-app react-webimage 
 
 
@@ -38,10 +42,14 @@ docker run --env-file ./.env -v ${pwd}\src:/app/src -d -p 3000:3000 --name car-c
  docker-compose up -d
 
  docker-compose down
+ 
+ 
 if run this blow command first change in docker-compose.yml file as blow 
+
+
 docker run -it --env-file ./.env -v ${pwd}\src:/app/src -d -p 3000:3000 --name car-cafe-app react-webimage
 
-docker-compose.yml
+* docker-compose.yml
 
 version: "3"
 services:
@@ -59,11 +67,13 @@ services:
     #env_file:
     #   - ./.env
 
-
+*
 
 
 docker-compose -f docker-compose.yml -f docker-compose-prod.yml up  -d --build
+
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up  -d --build
+
 
 
 
